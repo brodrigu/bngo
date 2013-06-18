@@ -1,0 +1,30 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 32px;
+	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+
+}
+
+body {
+	font-size: 14px;
+	font-family: 'HelveticaNeue-Light', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	line-height: 1.4em;
+	color: #4d4d4d;
+	width: 550px;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.hidden{
+	display:none;
+}

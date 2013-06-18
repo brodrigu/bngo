@@ -1,0 +1,1 @@
+window.Bngo = Ember.Application.create();
