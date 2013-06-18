@@ -6,6 +6,12 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <script type="text/x-handlebars" data-template-name="newGame">
+        new Game
+        </script>
+        <script type="text/x-handlebars" data-template-name="joinGame">
+        join Game
+        </script>
         <script type="text/x-handlebars" data-template-name="games">
         <section id="welcome">
             <header id="header">
@@ -16,13 +22,13 @@
                 <p>Join a nearby Game</p>
                 <ul>
                     {{#each controller}}
-                    <li><a href="#">{{title}}</a>: {{participants}}</li>
+                    <li>{{#linkTo joinGame activeClass="selected"}}{{title}}{{/linkTo}}: {{participants}}</li>
                     {{/each}}
                 <ul>
             </section>
 
             <footer id="footer">
-                <a href="#">Start new game</a>
+                {{#linkTo newGame activeClass="selected"}}Start New Game{{/linkTo}}
             </footer>
         </section>
 
