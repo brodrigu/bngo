@@ -6,11 +6,52 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <script type="text/x-handlebars" data-template-name="loadingGame">
+        <section id="welcome">
+            <header id="header">
+                <h1>BingoWithCoWorkers</h1>
+            </header>
+
+            <section>
+                <p>Waiting for players. Currently, the following coworkers are ready to play:</p>
+                <ul>
+                    {{#each controller}}
+                    <li>{{participants}}</li>
+                    {{/each}}
+                <ul>
+            </section>
+
+            <footer id="footer">
+                {{#linkTo loadingGame activeClass="selected"}}Begin{{/linkTo}}
+            </footer>
+        </section>
+
+        <footer id="info">
+            <p>Made by some cool dudes.</p>
+        </footer>
+        </script>
         <script type="text/x-handlebars" data-template-name="newGame">
-        new Game
+        <section id="welcome">
+            <header id="header">
+                <h1>BingoWithCoWorkers</h1>
+            </header>
+
+            <section>
+                <p>Name the meeting you are attending</p>
+                {{view Ember.TextField id="new-game" placeholder="Meeting Name" valueBinding="newGame" action="createGame"}}
+            </section>
+
+            <footer id="footer">
+                {{#linkTo loadingGame activeClass="selected"}}Begin{{/linkTo}}
+            </footer>
+        </section>
+
+        <footer id="info">
+            <p>Made by some cool dudes.</p>
+        </footer>
         </script>
         <script type="text/x-handlebars" data-template-name="joinGame">
-        join Game
+        join
         </script>
         <script type="text/x-handlebars" data-template-name="games">
         <section id="welcome">
@@ -48,6 +89,7 @@
         <script src="js/router.js"></script>
         <script src="js/models/store.js"></script>
         <script src="js/models/game.js"></script>
+        <script src="js/controllers/games.js"></script>
 
     </body>
 </html>
